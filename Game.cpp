@@ -21,54 +21,70 @@ void Game::Reset()
 
 	// TODO #2 - Add this brick and 4 more bricks to the vector
 	// Brick 1
-	brick.width = 10;
-	brick.height = 2;
-	brick.x_position = 0;
-	brick.y_position = 5;
-	brick.doubleThick = true;
-	brick.color = ConsoleColor::DarkGreen;
 
-	bricks.push_back(brick);
+	int xCount = 0;
+	for (int i = 0; i < 5; i++) {
+		bricks[i].Draw();
+		brick.width = 10;
+		brick.height = 2;
+		brick.x_position = xCount;
+		brick.y_position = 5;
+		brick.doubleThick = true;
+		brick.color = ConsoleColor::DarkGreen;
 
-	// Brick 2
-	brick2.width = 10;
-	brick2.height = 2;
-	brick2.x_position = 10;
-	brick2.y_position = 5;
-	brick2.doubleThick = true;
-	brick2.color = ConsoleColor::DarkGreen;
+		bricks.push_back(brick);
 
-	bricks.push_back(brick2);
+		xCount = xCount + 10;
+	}
 
-	// brick 3
-	brick3.width = 10;
-	brick3.height = 2;
-	brick3.x_position = 20;
-	brick3.y_position = 5;
-	brick3.doubleThick = true;
-	brick3.color = ConsoleColor::DarkGreen;
+	//brick.width = 10;
+	//brick.height = 2;
+	//brick.x_position = 0;
+	//brick.y_position = 5;
+	//brick.doubleThick = true;
+	//brick.color = ConsoleColor::DarkGreen;
 
-	bricks.push_back(brick3);
+	//bricks.push_back(brick);
 
-	// brick 4
-	brick4.width = 10;
-	brick4.height = 2;
-	brick4.x_position = 30;
-	brick4.y_position = 5;
-	brick4.doubleThick = true;
-	brick4.color = ConsoleColor::DarkGreen;
+	//// Brick 2
+	//brick2.width = 10;
+	//brick2.height = 2;
+	//brick2.x_position = 10;
+	//brick2.y_position = 5;
+	//brick2.doubleThick = true;
+	//brick2.color = ConsoleColor::DarkGreen;
 
-	bricks.push_back(brick4);
+	//bricks.push_back(brick2);
 
-	//brick 5
-	brick5.width = 10;
-	brick5.height = 2;
-	brick5.x_position = 40;
-	brick5.y_position = 5;
-	brick5.doubleThick = true;
-	brick5.color = ConsoleColor::DarkGreen;
+	//// brick 3
+	//brick3.width = 10;
+	//brick3.height = 2;
+	//brick3.x_position = 20;
+	//brick3.y_position = 5;
+	//brick3.doubleThick = true;
+	//brick3.color = ConsoleColor::DarkGreen;
 
-	bricks.push_back(brick5);
+	//bricks.push_back(brick3);
+
+	//// brick 4
+	//brick4.width = 10;
+	//brick4.height = 2;
+	//brick4.x_position = 30;
+	//brick4.y_position = 5;
+	//brick4.doubleThick = true;
+	//brick4.color = ConsoleColor::DarkGreen;
+
+	//bricks.push_back(brick4);
+
+	////brick 5
+	//brick5.width = 10;
+	//brick5.height = 2;
+	//brick5.x_position = 40;
+	//brick5.y_position = 5;
+	//brick5.doubleThick = true;
+	//brick5.color = ConsoleColor::DarkGreen;
+
+	//bricks.push_back(brick5);
 }
 
 void Game::ResetBall()
